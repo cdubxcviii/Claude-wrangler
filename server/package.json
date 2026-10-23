@@ -1,0 +1,13 @@
+{
+  "name": "wrangler-ai-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Keeps the Anthropic API key off the phone: the app posts a photo here and gets a fish estimate back.",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.2.0"
+  }
+}

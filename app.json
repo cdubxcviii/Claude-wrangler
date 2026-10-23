@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "Wrangler",
+    "slug": "wrangler",
+    "scheme": "wrangler",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wrangler.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Wrangler uses your location to record where you caught each fish.",
+        "NSCameraUsageDescription": "Wrangler uses the camera to photograph your catch.",
+        "NSPhotoLibraryUsageDescription": "Wrangler lets you pick a photo of your catch."
+      }
+    },
+    "android": {
+      "package": "com.wrangler.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "asyncRoutes": false
+        }
+      ],
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Wrangler uses your location to record where you caught each fish."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Wrangler uses the camera to photograph your catch.",
+          "photosPermission": "Wrangler lets you pick a photo of your catch."
+        }
+      ],
+      "expo-image"
+    ]
+  }
+}
